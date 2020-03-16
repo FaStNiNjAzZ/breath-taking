@@ -8,7 +8,12 @@ public class PlayerScript : MonoBehaviour
     public int moveSpeed = 5;
     public static bool UICheck = false;
     public GameObject containerUI;
-    public GameObject speechUI;
+    public GameObject speechUI1;
+    public GameObject speechUI1Path1;
+    public GameObject speechUI1Path2;
+    public GameObject intrustionTextOpen;
+    public GameObject intrustionTextSpeech;
+    public GameObject exitCanvas;
     Rigidbody2D myRigidBody;
 
     // Start is called before the first frame update
@@ -41,36 +46,54 @@ public class PlayerScript : MonoBehaviour
         }
 
        
+
+       
     }
 
-    void OnTriggerEnter2D (Collider2D other)
+    void OnCollisionStay2D(Collision2D other)
     {
-        if (other.tag == "Container")
+        Debug.Log("I guess it's colliding");
+        if (other.collider.tag == "Container")
         {
+            intrustionTextOpen.SetActive(true);
+            Debug.Log("I guess it's detecting a tag");
             if (Input.GetKeyDown(KeyCode.E))
             {
-                if (UICheck == true)
+                if (UICheck == false)
                 {
-                    exitContainerMenu();
-                }
-                else
-                {
+                    Debug.Log("Clicking E");
                     openContainerMenu();
                 }
             }
         }
-        if (other.tag == "GenericNPC1")
+        if (other.collider.tag == "GenericNPC1")
         {
-            if (UICheck == true)
+            Debug.Log("I guess E");
+            intrustionTextSpeech.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                exitSpeech();
+                if (UICheck == false)
+                {
+                    openSpeech();
+                    openExitCanvas();
+                }
             }
-            else
-            {
-                openSpeech();
-            }
+            
         }
 
+    }
+
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.collider.tag == "Container")
+        {
+            intrustionTextOpen.SetActive(false);
+        }
+
+        if (other.collider.tag == "GenericNPC1")
+        {
+            intrustionTextSpeech.SetActive(false);
+        }
     }
 
 
@@ -90,15 +113,28 @@ public class PlayerScript : MonoBehaviour
 
     public void exitSpeech()
     {
-        containerUI.SetActive(false);
+        speechUI1.SetActive(false);
+        speechUI1Path1.SetActive(false);
+        speechUI1Path2.SetActive(false);
         Time.timeScale = 1f;
         UICheck = false;
+        closeExitCanvas();
     }
 
     public void openSpeech()
     {
-        containerUI.SetActive(true);
+        speechUI1.SetActive(true);
         Time.timeScale = 0.0f;
         UICheck = true;
+    }
+    
+    public void openExitCanvas()
+    {
+        exitCanvas.SetActive(true);
+    }
+
+    public void closeExitCanvas()
+    {
+        exitCanvas.SetActive(false);
     }
 }
