@@ -7,6 +7,9 @@ public class PlayerScript : MonoBehaviour
     //Variables
     public int moveSpeed = 5;
     public static bool UICheck = false;
+    Rigidbody2D myRigidBody;
+
+    //Holy shit that's a lot of Game Objects
     public GameObject containerUI;
     public GameObject speechUI1;
     public GameObject speechUI1Path1;
@@ -14,7 +17,6 @@ public class PlayerScript : MonoBehaviour
     public GameObject intrustionTextOpen;
     public GameObject intrustionTextSpeech;
     public GameObject exitCanvas;
-    Rigidbody2D myRigidBody;
 
     // Start is called before the first frame update
     void Start()
@@ -43,11 +45,7 @@ public class PlayerScript : MonoBehaviour
         if (Input.GetKey(KeyCode.RightArrow))
         {
             transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
-        }
-
-       
-
-       
+        }       
     }
 
     void OnCollisionStay2D(Collision2D other)
@@ -78,9 +76,7 @@ public class PlayerScript : MonoBehaviour
                     openExitCanvas();
                 }
             }
-            
         }
-
     }
 
     private void OnCollisionExit2D(Collision2D other)
