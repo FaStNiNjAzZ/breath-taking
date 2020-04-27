@@ -14,10 +14,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menus/Options.unity
     guid: 604af1683299d834eb93690604802d90
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Menus/LoadGame.unity
     guid: 2ab74be7cc64ef540ab249781f827fb0
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Inside1.unity
+    guid: 7c3ad82e68ec28047947bef6e5fbd379
+  - enabled: 1
+    path: Assets/Scenes/MainWorld.unity
+    guid: 68e6a56265f46294fa34ebb0c6c6b05f
+  - enabled: 1
+    path: Assets/Scenes/Inside2.unity
+    guid: 8fc63d3f1eafc864c85df292f2efea4a
   m_configObjects: {}

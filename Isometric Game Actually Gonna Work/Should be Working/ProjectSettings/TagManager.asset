@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Container
   - GenericNPC1
+  - Door1
+  - Door2
+  - Door3
+  - GenericNPC2
   layers:
   - Default
   - TransparentFX

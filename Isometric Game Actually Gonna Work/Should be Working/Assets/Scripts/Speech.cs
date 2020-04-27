@@ -7,6 +7,9 @@ public class Speech : MonoBehaviour
     public GameObject speechUI1;
     public GameObject speechUI1Path1;
     public GameObject speechUI1Path2;
+
+    PlayerData player;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +31,7 @@ public class Speech : MonoBehaviour
     {
         speechUI1.SetActive(false);
         speechUI1Path1.SetActive(true);
+        //player.factoryUnlock = true;
     }
 
     public void option2SpeechButton()

@@ -23,7 +23,7 @@ public class LoadGameScript : MonoBehaviour
         {
             using (StreamWriter sw = File.CreateText("errorlog.txt"))
             {
-                sw.WriteLine("Message --- {0}", ex.Message);
+               // sw.WriteLine("Message --- {0}", ex.Message);
             }
         }
     }
