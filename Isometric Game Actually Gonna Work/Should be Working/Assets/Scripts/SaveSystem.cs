@@ -15,6 +15,7 @@ public static class SaveSystem
 
         formatter.Serialize(stream, data);
         stream.Close();
+        Debug.Log("Successful Save In " + path);
     }
 
     public static PlayerData LoadPlayerAuto()
@@ -49,6 +50,7 @@ public static class SaveSystem
 
         formatter.Serialize(stream, data);
         stream.Close();
+        Debug.Log("Successful Save In " + path);
     }
 
     public static PlayerData2 LoadPlayer()

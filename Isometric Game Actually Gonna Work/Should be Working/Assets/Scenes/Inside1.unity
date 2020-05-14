@@ -2831,6 +2831,7 @@ GameObject:
   - component: {fileID: 658356468}
   - component: {fileID: 658356467}
   - component: {fileID: 658356466}
+  - component: {fileID: 658356469}
   m_Layer: 0
   m_Name: Generic NPC#1
   m_TagString: GenericNPC1
@@ -2931,6 +2932,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &658356469
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658356465}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1.0742179, y: -2.2834687}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.33, y: 4.14}
+    newSize: {x: 2.33, y: 4.14}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 9.9332905, y: 8.706936}
+  m_EdgeRadius: 0
 --- !u!1 &662252351
 GameObject:
   m_ObjectHideFlags: 0
@@ -2945,6 +2972,7 @@ GameObject:
   - component: {fileID: 662252354}
   - component: {fileID: 662252353}
   - component: {fileID: 662252352}
+  - component: {fileID: 662252358}
   m_Layer: 0
   m_Name: OpenContainer
   m_TagString: Container
@@ -3093,12 +3121,38 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 662252351}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.01, y: -6.62, z: 1}
+  m_LocalPosition: {x: 14.73, y: -8.78, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &662252358
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 662252351}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.12373114, y: -0.24746037}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.31, y: 1.94}
+    newSize: {x: 2.31, y: 1.94}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.362029, y: 4.2496376}
+  m_EdgeRadius: 0
 --- !u!1 &686530292
 GameObject:
   m_ObjectHideFlags: 0
@@ -3834,7 +3888,18 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2066042043}
-        m_MethodName: LoadPlayer
+        m_MethodName: LoadGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2066042043}
+        m_MethodName: LoadGame2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5144,7 +5209,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2066042043}
-        m_MethodName: exitContainerMenu
+        m_MethodName: ExitContainerMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5611,6 +5676,7 @@ GameObject:
   - component: {fileID: 1637911219}
   - component: {fileID: 1637911221}
   - component: {fileID: 1637911220}
+  - component: {fileID: 1637911222}
   m_Layer: 0
   m_Name: Door
   m_TagString: Door3
@@ -5701,6 +5767,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1637911222
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637911218}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.05874014}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.1, y: 2.93}
+    newSize: {x: 5.1, y: 2.93}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.1, y: 3.0474806}
+  m_EdgeRadius: 0
 --- !u!1 &1647468900
 GameObject:
   m_ObjectHideFlags: 0
@@ -6045,7 +6137,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1825156455}
         m_MethodName: MainMenu
         m_Mode: 1
         m_Arguments:
@@ -6686,6 +6778,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85604ffcc32b9e747b5cb2698560f06b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  position: []
+  scene: 
+  militaryUnlock: 0
+  factoryUnlock: 0
   loadingScreen: {fileID: 0}
 --- !u!114 &1825156455
 MonoBehaviour:
@@ -7592,6 +7688,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  scene: 
   militaryUnlock: 0
   factoryUnlock: 0
   doorClose: {fileID: 0}
@@ -7612,6 +7709,7 @@ MonoBehaviour:
   speechFactoryUnlocks: {fileID: 0}
   speechFactoryUnlocks1: {fileID: 0}
   speechFactoryUnlocks2: {fileID: 0}
+  loadingScreen: {fileID: 0}
 --- !u!61 &2066042044
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7652,7 +7750,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 6200000, guid: 3486e2634967c1547920b5949c0f2433, type: 2}
   m_Interpolate: 0

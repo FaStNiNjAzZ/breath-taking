@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Menus/Options.unity
     guid: 604af1683299d834eb93690604802d90
   - enabled: 0
-    path: Assets/Scenes/Menus/LoadGame.unity
+    path: 
     guid: 2ab74be7cc64ef540ab249781f827fb0
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
@@ -29,4 +29,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Inside2.unity
     guid: 8fc63d3f1eafc864c85df292f2efea4a
+  - enabled: 1
+    path: Assets/Scenes/Ending1.unity
+    guid: e699b7736ce06624081db8268fc305b5
+  - enabled: 1
+    path: Assets/Scenes/Ending2.unity
+    guid: c756e9a4c93a17f489c28b647689f103
+  - enabled: 1
+    path: Assets/Scenes/Ending3.unity
+    guid: 9a80f3cc49ad7844294a2f6121d24311
+  - enabled: 1
+    path: Assets/Scenes/IntroScene.unity
+    guid: 45c2b4bffde78c64c9de9a588083497b
   m_configObjects: {}

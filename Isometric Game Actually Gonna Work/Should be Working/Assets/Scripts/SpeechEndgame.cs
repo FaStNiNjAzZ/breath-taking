@@ -7,9 +7,13 @@ public class SpeechEndgame : MonoBehaviour
     public GameObject speechAllUnlocks;
     public GameObject speechAllUnlocks1;
     public GameObject speechAllUnlocks2;
+    public GameObject speechAllUnlocks3;
     public GameObject speechMilitaryUnlocks;
     public GameObject speechMilitaryUnlocks1;
     public GameObject speechMilitaryUnlocks2;
+    public GameObject speechFactoryUnlocks;
+    public GameObject speechFactoryUnlocks1;
+    public GameObject speechFactoryUnlocks2;
 
     // Start is called before the first frame update
     void Start()
@@ -22,21 +26,54 @@ public class SpeechEndgame : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-          //  speechUI1.SetActive(false);
+          //speechUI1.SetActive(false);
            // speechUI1Path1.SetActive(false);
            // speechUI1Path2.SetActive(false);
         }
     }
 
-    public void option1SpeechButton()
+    //All Unlock Buttons
+    public void option1SpeechAllUnlocksButton()
     {
-       // speechUI1.SetActive(false);
-       // speechUI1Path1.SetActive(true);
+        speechAllUnlocks.SetActive(false);
+        speechAllUnlocks1.SetActive(true);
     }
 
-    public void option2SpeechButton()
+    public void option2SpeechAllUnlocksButton()
     {
-       // speechUI1.SetActive(false);
-        //speechUI1Path2.SetActive(true);
+        speechAllUnlocks.SetActive(false);
+        speechAllUnlocks2.SetActive(true);
+    }
+
+    public void option3SpeechAllUnlocksButton()
+    {
+        speechAllUnlocks.SetActive(false);
+        speechAllUnlocks3.SetActive(true);
+    }
+
+    //Military Unlock Buttons
+    public void option1SpeechMilitaryUnlocksButton()
+    {
+        speechMilitaryUnlocks.SetActive(false);
+        speechMilitaryUnlocks1.SetActive(true);
+    }
+
+    public void option2SpeechMilitaryUnlocksButton()
+    {
+        speechMilitaryUnlocks.SetActive(false);
+        speechMilitaryUnlocks2.SetActive(true);
+    }
+
+    //Factory Unlock Buttons
+    public void option1SpeechFactoryUnlocksButton()
+    {
+        speechMilitaryUnlocks.SetActive(false);
+        speechMilitaryUnlocks1.SetActive(true);
+    }
+
+    public void option2SpeechFactoryUnlocksButton()
+    {
+        speechMilitaryUnlocks.SetActive(false);
+        speechMilitaryUnlocks2.SetActive(true);
     }
 }

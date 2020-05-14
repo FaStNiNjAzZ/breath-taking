@@ -1863,9 +1863,10 @@ GameObject:
   - component: {fileID: 796721149}
   - component: {fileID: 796721148}
   - component: {fileID: 796721150}
+  - component: {fileID: 796721151}
   m_Layer: 0
   m_Name: BuildingbigGodrays
-  m_TagString: Untagged
+  m_TagString: Door1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1969,6 +1970,32 @@ EdgeCollider2D:
   - {x: -1.2454395, y: 1.1286948}
   - {x: -1.814498, y: 0.8500483}
   - {x: -1.7775831, y: -3.671595}
+--- !u!61 &796721151
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796721147}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1.0558436, y: -4.616727}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.57, y: 11.48}
+    newSize: {x: 3.57, y: 11.48}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.1394401, y: 1.418436}
+  m_EdgeRadius: 0
 --- !u!1 &800858259
 GameObject:
   m_ObjectHideFlags: 0
@@ -2547,7 +2574,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1944684506}
+      - m_Target: {fileID: 1944684507}
         m_MethodName: MainMenu
         m_Mode: 1
         m_Arguments:
@@ -3549,7 +3576,18 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 308561401}
-        m_MethodName: LoadPlayer
+        m_MethodName: LoadGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 308561401}
+        m_MethodName: LoadGame2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4069,9 +4107,10 @@ GameObject:
   - component: {fileID: 1871088662}
   - component: {fileID: 1871088661}
   - component: {fileID: 1871088663}
+  - component: {fileID: 1871088664}
   m_Layer: 0
   m_Name: Building with lightrays
-  m_TagString: Untagged
+  m_TagString: Door2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4162,6 +4201,32 @@ EdgeCollider2D:
   - {x: -0.032567024, y: -3.1247194}
   - {x: -2.5568967, y: -1.940935}
   - {x: -2.5333323, y: 2.7725809}
+--- !u!61 &1871088664
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871088660}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1.3353059, y: -3.0842013}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.12, y: 8.52}
+    newSize: {x: 5.12, y: 8.52}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.1258979, y: 1.3776278}
+  m_EdgeRadius: 0
 --- !u!1 &1929766826
 GameObject:
   m_ObjectHideFlags: 0

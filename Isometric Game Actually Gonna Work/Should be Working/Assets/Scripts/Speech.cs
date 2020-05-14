@@ -39,4 +39,19 @@ public class Speech : MonoBehaviour
         speechUI1.SetActive(false);
         speechUI1Path2.SetActive(true);
     }
+
+    public void Ending1()
+    {
+        Application.LoadLevel("Ending1");
+    }
+
+    public void Ending2()
+    {
+        Application.LoadLevel("Ending2");
+    }
+
+    public void Ending3()
+    {
+        Application.LoadLevel("Ending3");
+    }
 }

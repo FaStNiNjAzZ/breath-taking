@@ -38,6 +38,8 @@ public class PlayerScript : MonoBehaviour
     public GameObject speechFactoryUnlocks1;
     public GameObject speechFactoryUnlocks2;
 
+    public GameObject introSpeech;
+
     //Other Game Objects
     public GameObject loadingScreen;
 
@@ -45,6 +47,8 @@ public class PlayerScript : MonoBehaviour
     void  Start()
     {
         Debug.Log(scene);
+        LoadGame();
+        
     }
 
     // Update is called once per frame
@@ -76,9 +80,46 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
-    void OnCollisionStay2D(Collision2D other)
+
+
+    private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.collider.tag == "Container")
+        if (other.gameObject.tag == "Container")
+        {
+            intrustionTextOpen.SetActive(false);
+        }
+
+        if (other.gameObject.tag == "Door1")
+        {
+            intrustionTextOpen.SetActive(false);
+        }
+
+        if (other.gameObject.tag == "Door2")
+        {
+            intrustionTextOpen.SetActive(false);
+        }
+
+        if (other.gameObject.tag == "Door3")
+        {
+            intrustionTextOpen.SetActive(false);
+        }
+
+        if (other.gameObject.tag == "GenericNPC1")
+        {
+            intrustionTextSpeech.SetActive(false);
+        }
+
+        if (other.gameObject.tag == "GenericNPC2")
+        {
+            intrustionTextSpeech.SetActive(false);
+        }
+    }
+
+
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Container")
         {
             intrustionTextOpen.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E))
@@ -87,10 +128,11 @@ public class PlayerScript : MonoBehaviour
                 {
                     militaryUnlock = true;
                     OpenContainerMenu();
+
                 }
             }
         }
-        if (other.collider.tag == "GenericNPC1")
+        if (other.gameObject.tag == "GenericNPC1")
         {
             intrustionTextSpeech.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E))
@@ -103,9 +145,9 @@ public class PlayerScript : MonoBehaviour
             }
         }
 
-        if (other.collider.tag == "GenericNPC2")
+        if (other.gameObject.tag == "GenericNPC2")
         {
-            LoadPlayer();
+            LoadGame();
             intrustionTextSpeech.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E))
             {
@@ -132,59 +174,43 @@ public class PlayerScript : MonoBehaviour
             }
         }
 
-        if (other.collider.tag == "Door1")
+        if (other.gameObject.tag == "Door1")
         {
             intrustionTextOpen.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E))
             {
                 if (UICheck == false)
                 {
+                    SaveSystem.SavePlayerAuto(this);
                     Interior1();
-                    
                 }
             }
         }
 
-        if (other.collider.tag == "Door2")
+        if (other.gameObject.tag == "Door2")
         {
             intrustionTextOpen.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E))
             {
                 if (UICheck == false)
                 {
+                    SaveSystem.SavePlayerAuto(this);
                     Interior2();
                 }
             }
         }
 
-        if (other.collider.tag == "Door3")
+        if (other.gameObject.tag == "Door3")
         {
             intrustionTextOpen.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E))
             {
                 if (UICheck == false)
                 {
+                    SaveSystem.SavePlayerAuto(this);
                     Outside();
                 }
             }
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D other)
-    {
-        if (other.collider.tag == "Container")
-        {
-            intrustionTextOpen.SetActive(false);
-        }
-
-        if (other.collider.tag == "GenericNPC1")
-        {
-            intrustionTextSpeech.SetActive(false);
-        }
-
-        if (other.collider.tag == "GenericNPC2")
-        {
-            intrustionTextSpeech.SetActive(false);
         }
     }
 
@@ -228,6 +254,8 @@ public class PlayerScript : MonoBehaviour
         speechFactoryUnlocks.SetActive(false);
         speechFactoryUnlocks1.SetActive(false);
         speechFactoryUnlocks2.SetActive(false);
+
+        introSpeech.SetActive(false);
 
         Time.timeScale = 1f;
         UICheck = false;
@@ -289,19 +317,22 @@ public class PlayerScript : MonoBehaviour
     public void Outside()
     {
         Application.LoadLevel("MainWorld");
+        LoadGame();
     }
 
     public void Interior1()
     {
         Application.LoadLevel("Inside1");
-        LoadPlayer();
+        LoadGame();
     }
 
     public void Interior2()
-    {
+    { 
         Application.LoadLevel("Inside2");
-        LoadPlayer();
+        LoadGame();
     }
+
+    
 
     //Speech
     public void option1SpeechButton()
@@ -370,8 +401,8 @@ public class PlayerScript : MonoBehaviour
     {
         loadingScreen.SetActive(true);
         Debug.Log(scene);
-        Application.LoadLevel("MainWorld");
-
+        Application.LoadLevel("IntroScene");
+        Time.timeScale = 0.0f;
         militaryUnlock = false;
         factoryUnlock = false;
         scene = "MainWorld";

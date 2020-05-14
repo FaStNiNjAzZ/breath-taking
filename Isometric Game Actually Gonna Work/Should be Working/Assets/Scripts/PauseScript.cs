@@ -48,4 +48,10 @@ public class PauseScript : MonoBehaviour
         pauseCheck = false;
         Time.timeScale = 1f;
     }
+
+    public void MainMenu()
+    {
+        Application.LoadLevel("MainMenuScene");
+        ClosePauseMenu();
+    }
 }
