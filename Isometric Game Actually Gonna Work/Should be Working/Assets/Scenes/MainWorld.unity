@@ -1182,6 +1182,7 @@ MonoBehaviour:
   speechFactoryUnlocks: {fileID: 0}
   speechFactoryUnlocks1: {fileID: 0}
   speechFactoryUnlocks2: {fileID: 0}
+  introSpeech: {fileID: 0}
   loadingScreen: {fileID: 0}
 --- !u!61 &308561402
 BoxCollider2D:
@@ -2145,7 +2146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

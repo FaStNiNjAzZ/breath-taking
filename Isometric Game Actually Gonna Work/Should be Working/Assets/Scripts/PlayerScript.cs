@@ -73,11 +73,6 @@ public class PlayerScript : MonoBehaviour
         {
             transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
         }
-
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            ExitSpeech();
-        }
     }
 
 
@@ -229,20 +224,12 @@ public class PlayerScript : MonoBehaviour
         UICheck = true;
     }
 
-    public void ExitSpeech()
+    public void ExitSpeech1()
     {
         speechUI.SetActive(false);
         speechUI1.SetActive(false);
         speechUI2.SetActive(false);
 
-        Time.timeScale = 1f;
-        UICheck = false;
-        CloseExitCanvas();
-        SavePlayer();
-    }
-
-    public void ExitSpeech1()
-    {
         speechAllUnlocks.SetActive(false);
         speechAllUnlocks1.SetActive(false);
         speechAllUnlocks2.SetActive(false);
@@ -254,6 +241,8 @@ public class PlayerScript : MonoBehaviour
         speechFactoryUnlocks.SetActive(false);
         speechFactoryUnlocks1.SetActive(false);
         speechFactoryUnlocks2.SetActive(false);
+
+        exitCanvas.SetActive(false);
 
         introSpeech.SetActive(false);
 
@@ -345,9 +334,8 @@ public class PlayerScript : MonoBehaviour
 
     public void option2SpeechButton()
     {
-        speechUI1.SetActive(false);
+        speechUI.SetActive(false);
         speechUI2.SetActive(true);
-        militaryUnlock = true;
         SavePlayer();
     }
 
