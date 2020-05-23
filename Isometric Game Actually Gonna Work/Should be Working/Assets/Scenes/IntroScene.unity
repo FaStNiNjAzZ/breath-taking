@@ -7704,9 +7704,9 @@ MonoBehaviour:
   intrustionTextOpen: {fileID: 1205851345}
   intrustionTextSpeech: {fileID: 152755359}
   exitCanvas: {fileID: 1542839507}
-  speechUI: {fileID: 0}
-  speechUI1: {fileID: 0}
-  speechUI2: {fileID: 0}
+  speechUI: {fileID: 837771884}
+  speechUI1: {fileID: 837771884}
+  speechUI2: {fileID: 837771884}
   speechAllUnlocks: {fileID: 238440820}
   speechAllUnlocks1: {fileID: 65706459}
   speechAllUnlocks2: {fileID: 1938292195}
