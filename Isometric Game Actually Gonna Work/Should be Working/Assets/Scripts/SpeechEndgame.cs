@@ -67,13 +67,22 @@ public class SpeechEndgame : MonoBehaviour
     //Factory Unlock Buttons
     public void option1SpeechFactoryUnlocksButton()
     {
-        speechMilitaryUnlocks.SetActive(false);
-        speechMilitaryUnlocks1.SetActive(true);
+        speechFactoryUnlocks.SetActive(false);
+        speechFactoryUnlocks1.SetActive(true);
     }
 
     public void option2SpeechFactoryUnlocksButton()
     {
+        speechFactoryUnlocks.SetActive(false);
+        speechFactoryUnlocks2.SetActive(true);
+    }
+
+    //No Option Button
+    public void NoOptionButton()
+    {
+        speechAllUnlocks.SetActive(false);
+        speechFactoryUnlocks.SetActive(false);
         speechMilitaryUnlocks.SetActive(false);
-        speechMilitaryUnlocks2.SetActive(true);
+        speechAllUnlocks3.SetActive(true);
     }
 }
